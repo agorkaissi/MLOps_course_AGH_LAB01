@@ -8,3 +8,39 @@ Accept: application/json
 # health test
 GET http://127.0.0.1:8000/health
 Accept: application/json
+
+###
+# Test /predict setosa
+POST http://127.0.0.1:8000/predict
+Content-Type: application/json
+
+{
+  "sepal_length": 5.1,
+  "sepal_width": 3.5,
+  "petal_length": 1.4,
+  "petal_width": 0.2
+}
+
+###
+# Test /predict versicolor
+POST http://127.0.0.1:8000/predict
+Content-Type: application/json
+
+{
+  "sepal_length": 6.0,
+  "sepal_width": 2.9,
+  "petal_length": 4.5,
+  "petal_width": 1.5
+}
+
+###
+# Test /predict virginica
+POST http://127.0.0.1:8000/predict
+Content-Type: application/json
+
+{
+  "sepal_length": 6.5,
+  "sepal_width": 3.0,
+  "petal_length": 5.5,
+  "petal_width": 2.0
+}
